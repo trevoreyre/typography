@@ -1,20 +1,52 @@
 import React, { useContext } from 'react'
-import { LevelContext } from './Context'
+import Context from './Context'
 
-const H = props => {
+const H1 = props => {
   const { as, ...other } = props
-  const level = useContext(LevelContext)
+  const level = useContext(Context)
   const Heading = as || 'h' + level
 
-  return <Heading {...other} />
+  return <Heading data-h1 {...other} />
 }
 
-const H1 = props => <H data-h1 {...props} />
-const H2 = props => <H data-h2 {...props} />
-const H3 = props => <H data-h3 {...props} />
-const H4 = props => <H data-h4 {...props} />
-const H5 = props => <H data-h5 {...props} />
-const H6 = props => <H data-h6 {...props} />
+const H2 = props => {
+  const { as, ...other } = props
+  const level = useContext(Context)
+  const Heading = as || 'h' + level
 
-export default H
+  return <Heading data-h2 {...other} />
+}
+
+const H3 = props => {
+  const { as, ...other } = props
+  const level = useContext(Context)
+  const Heading = as || 'h' + level
+
+  return <Heading data-h3 {...other} />
+}
+
+const H4 = props => {
+  const { as, ...other } = props
+  const level = useContext(Context)
+  const Heading = as || 'h' + level
+
+  return <Heading data-h4 {...other} />
+}
+
+const H5 = props => {
+  const { as, ...other } = props
+  const level = useContext(Context)
+  const Heading = as || 'h' + level
+
+  return <Heading data-h5 {...other} />
+}
+
+const H6 = props => {
+  const { as, ...other } = props
+  const level = useContext(Context)
+  const Heading = as || 'h' + level
+
+  return <Heading data-h6 {...other} />
+}
+
 export { H1, H2, H3, H4, H5, H6 }
